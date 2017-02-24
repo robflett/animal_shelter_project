@@ -10,12 +10,12 @@ CREATE TABLE owners(
 
 CREATE TABLE animals(
   id SERIAL4 PRIMARY KEY,
-  -- owner_id SERIAL4 REFERENCES owners(id),
   name VARCHAR(255),
   type VARCHAR(255),
   breed VARCHAR(255),
   adoptable VARCHAR(255), 
   admission_date DATE
   -- adoptable to be a drop down menu
+  -- owner_id SERIAL4 REFERENCES owners(id),
   
 );
