@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS animals;
 CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255)
-  -- pets_adopted VARCHAR(255)
+  pets VARCHAR(255)
   -- funds to be added ---
 );
 

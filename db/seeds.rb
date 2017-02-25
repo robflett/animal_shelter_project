@@ -41,7 +41,7 @@ animal4 = Animal.new({
   "breed" => "Springer Spaniel",
   "adoptable" => "Not-Adoptable",
   "admission_date" => "2017-02-23"
-  
+
   })
 
 animal1.save
@@ -50,23 +50,28 @@ animal3.save
 animal4.save
 
 owner1 = Owner.new({
-  "name" => "Life Raluy"
+  "name" => "Claire Redfield",
+  "pets" => ""
   })
 
 owner2 = Owner.new({
-  "name" => "Aaron Hubber"
+  "name" => "Barry Burton",
+  "pets" => ""
   })
 
 owner3 = Owner.new({
-  "name" => "Dallas Henderson"
+  "name" => "Ada Wong",
+  "pets" => ""
   })
 
 owner4 = Owner.new({
-  "name" => "Grant Mclay"
+  "name" => "Leon Kennedy",
+  "pets" => ""
   })
 
 owner5 = Owner.new({
-  "name" => "Tony Neri"
+  "name" => "Chris Redfield",
+  "pets" => ""
   })
 
 owner1.save
