@@ -1,6 +1,8 @@
 require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
+require_relative('../models/adoption.rb')
 
+# Adoption.delete_all
 Animal.delete_all
 Owner.delete_all
 
@@ -79,3 +81,25 @@ owner2.save
 owner3.save
 owner4.save
 owner5.save
+
+# adoption1 = Adoption.new({
+#   "owner_id" => "owner1.id",
+#   "animal_id" => "animal2.id",
+#   "adopted_on" => "2017-02-22"
+#   })
+
+# adoption2 = Adoption.new({
+#   "owner_id" => "owner2.id",
+#   "animal_id" => "animal1.id",
+#   "adopted_on" => "2017-02-12"
+#   })
+
+# adoption3 = Adoption.new({
+#   "owner_id" => "owner4.id",
+#   "animal_id" => "animal3.id",
+#   "adopted_on" => "2017-02-08"
+#   })
+
+# adoption1.save
+# adoption2.save
+# adoption3.save
