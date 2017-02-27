@@ -1,0 +1,39 @@
+<form method="POST" action="/animals/new">
+
+<label for="name">Name: </label>
+<input type="text"
+id="name"
+name="name" />
+
+<label for="type">Type: </label>
+<input type="text"
+id="type"
+name="type" />
+
+<label for="breed">Breed: </label>
+<input type="text"
+id="breed"
+name="breed" />
+
+<label for="adoptable-select">Please Select: </label>
+
+<select  
+id="adoptable-select"
+name="adoptable">
+
+  <option value="Adoptable">Adoptable</option>
+  <option value="Not-adoptable">Not-adoptable</option>
+</select> 
+
+<label for="admission_date">Admission Date (please use year-month-day format e.g. 2016-02-24): </label>
+<input type="text"
+id="admission_date"
+name="admission_date" />
+
+
+<input type="submit" value="Confirm new animal" />
+
+<!-- Drop down box showing who is going to adopt this animal -->
+
+
+</form>

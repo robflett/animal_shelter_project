@@ -1,0 +1,20 @@
+<% @animals.each do |animal| %>
+
+<p>Animal Name: <%= animal.name %></p>
+<p> Type: <%= animal.type %></p>
+<p> Admission Date: <%= animal.admission_date %></p>
+
+  <div class="navbar">
+<p> <a href="/animals/<%= animal.id %>">Show Full Details</a> </p> 
+  </div>
+
+ 
+
+    <% if animal.adoptable == "Adoptable" %>
+      <div class="navbar">
+    <p> <a href="/animals/adopt?animal_id=<%= animal.id %>">Adopt Animal</a> </p> 
+      </div>
+    <% end %>
+    <!-- add adopt functionality -->
+
+<% end %>

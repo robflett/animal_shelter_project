@@ -1,0 +1,17 @@
+<%= @animal.name %> is being adopted by .....
+
+
+
+<label for="owner">Select Owner: </label>
+<select
+id="owner-select"
+name="owner_id">
+
+ <% @owners.each do |owner| %>
+<option value=<%= owner.id %>><%=owner.name%></option>
+
+
+
+<%end%>
+
+<input type="submit" value="Confirm Adoption" />

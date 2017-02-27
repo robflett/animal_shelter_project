@@ -1,0 +1,50 @@
+head {
+  text-align: left;
+  font-family: Impact;
+}
+
+.navbar ul li {display:inline;}
+.navbar a {
+
+padding:8px;
+color:white; background-color: blue;
+font-family: Tahoma;
+border-style:outset;
+text-decoration: none;
+width:8em;
+border-radius: 8px;
+
+}
+
+.navbar a:hover,
+.navbar a:active
+{
+
+border-style:inset;
+color:yellow;
+
+}
+
+.details {
+
+font-family: Tahoma;
+
+}
+
+.image {
+  border-radius: 8px;
+  text-align: center;
+}
+ 
+
+body {
+  text-align: center;
+  font-family: century;
+  background-color: grey;
+}
+
+.title {
+
+ font-family: fantasy;
+ font-size: xx-large;
+}

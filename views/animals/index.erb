@@ -1,0 +1,20 @@
+<div class="details">
+<p>Name: <%= @animal.name %></p>
+
+<p>Type: <%= @animal.type %></p>
+
+<p>Breed: <%= @animal.breed %></p> 
+
+<p>Adoptable?: <%= @animal.adoptable %></p>
+
+<p>Admission date: <%= @animal.admission_date %></p>
+</div>
+<hr /> 
+
+
+
+<form method="POST" action="/animals/<%= @animal.id %>/delete">
+
+  <input type="submit" value="Click to delete"/>
+
+</form>

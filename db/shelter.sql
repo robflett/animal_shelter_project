@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS animals; 
--- DROP TABLE IF EXISTS adoptions; 
+DROP TABLE IF EXISTS adoptions; 
 
 CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
@@ -16,13 +16,13 @@ CREATE TABLE animals(
   breed VARCHAR(255),
   adoptable VARCHAR(255), 
   admission_date VARCHAR(255)
-  -- adoptable to be a drop down menu
+
   -- owner_id SERIAL4 REFERENCES owners(id),
 );
 
--- CREATE TABLE adoptions(
---   id SERIAL4 PRIMARY KEY,
---   owner_id SERIAL4 REFERENCES owners(id),
---   animal_id SERIAL4 REFERENCES animals(id)
---   -- adopted_on DATE   
--- );
+CREATE TABLE adoptions(
+  id SERIAL4 PRIMARY KEY,
+  owner_id SERIAL4 REFERENCES owners(id),
+  animal_id SERIAL4 REFERENCES animals(id),
+  adopted_on DATE   
+);

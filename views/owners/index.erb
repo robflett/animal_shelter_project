@@ -1,0 +1,18 @@
+<div class="details">
+<p>Name: <%= @owner.name %></p>
+
+ <!-- Address entry to be added  -->
+
+<p>Pets: <%= @owner.pets %></p> 
+
+
+</div>
+<hr /> 
+
+
+
+<form method="POST" action="/owners/<%= @owner.id %>/delete">
+
+  <input type="submit" value="Click to delete"/>
+
+</form>
