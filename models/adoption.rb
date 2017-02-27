@@ -15,7 +15,7 @@ def initialize( options )
 end 
 
 def save()
-  sql="INSERT INTO adoptions (owner_id, animal_id) VALUES ('#{@owner_id}', '#{@animal_id}') RETURNING *;"
+  sql="INSERT INTO adoptions (owner_id, animal_id, adopted_on) VALUES ('#{@owner_id}', '#{@animal_id}', '#{@adopted_on}') RETURNING *;"
   adoption = SqlRunner.run(sql).first
   @id = adoption['id'].to_i
 end

@@ -3,19 +3,19 @@ require_relative ('../models/animal.rb')
 
 class Owner
 
-attr_accessor :name, :id, :pets
+attr_accessor :name, :id, :address
 
 
 def initialize( options )
 
   @id = options['id'].to_i
   @name = options['name']
-  @pets = []
+  @address = options['address']
 
 end 
 
 def save()
-  sql="INSERT INTO owners (name) VALUES ('#{@name}') RETURNING *;"
+  sql="INSERT INTO owners (name, address) VALUES ('#{@name}', '#{@address}') RETURNING *;"
   owner_info = SqlRunner.run(sql).first
   @id = owner_info['id'].to_i
 end
@@ -45,17 +45,18 @@ def delete()
   SqlRunner.run( sql )
 end
 
-def add_pet(pet)
-  @pets << pet
-end
-
-
-# def adopt_animal()
-#   pet = animal.name
-#   # Adoption.new('animal_id' => animal.id, 'owner_id' => @id).save
-#   # not sure how to represent the date the pet was adopted on#
-#   owner.add_pet(pet)
+# def add_pet(pet)
+#   @pets << pet
 # end
+
+
+def adopt_animal(animal_id)
+ 
+  Adoption.new({'animal_id' => animal_id, 'owner_id' => @id, 'adopted_on' => Date.new}).save
+  
+  # owner.add_pet(pet)
+  #delete id from animals table
+end
 
 
 end

@@ -46,12 +46,6 @@ def delete()
   SqlRunner.run( sql )
 end
 
-# def adopt(id)
-#   sql = "
-# ALTER TABLE owners ADD COLUMN pet_name INT4;
-# ALTER TABLE owners ADD FOREIGN KEY (pet_name) REFERENCES animals(name);"
-#   SqlRunner.run(sql)
- 
-# end
+
 
 end

@@ -1,17 +1,14 @@
 <%= @animal.name %> is being adopted by .....
 
+<form method="POST" action="/animals/<%= @animal.id %>/adopt">
 
+  <label for="owner">Select Owner: </label>
+  <select id="owner-select" name="owner_id">
 
-<label for="owner">Select Owner: </label>
-<select
-id="owner-select"
-name="owner_id">
+  <% @owners.each do |owner| %>
+    <option value=<%= owner.id %>><%=owner.name%></option>
+  <%end%>
 
- <% @owners.each do |owner| %>
-<option value=<%= owner.id %>><%=owner.name%></option>
+  <input type="submit" value="Confirm Adoption" />
 
-
-
-<%end%>
-
-<input type="submit" value="Confirm Adoption" />
+</form>

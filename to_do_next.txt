@@ -5,3 +5,18 @@ show owners with their pets.
 This is MVP.
 -----------------------
 
+
+
+<% for owner in @owners %>
+  <li><%= owner.name %></li>
+<% end %>
+
+-----------------------
+
+# def adopt(id)
+#   sql = "
+# ALTER TABLE owners ADD COLUMN pet_name INT4;
+# ALTER TABLE owners ADD FOREIGN KEY (pet_name) REFERENCES animals(name);"
+#   SqlRunner.run(sql)
+ 
+# end

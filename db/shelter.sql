@@ -1,11 +1,11 @@
+DROP TABLE IF EXISTS adoptions; 
 DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS animals; 
-DROP TABLE IF EXISTS adoptions; 
 
 CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  pets VARCHAR(255)
+  address VARCHAR(255)
   -- funds to be added ---
 );
 
@@ -22,7 +22,7 @@ CREATE TABLE animals(
 
 CREATE TABLE adoptions(
   id SERIAL4 PRIMARY KEY,
-  owner_id SERIAL4 REFERENCES owners(id),
-  animal_id SERIAL4 REFERENCES animals(id),
+  owner_id SERIAL4 REFERENCES owners ON DELETE CASCADE,
+  animal_id SERIAL4 REFERENCES animals ON DELETE CASCADE,
   adopted_on DATE   
 );

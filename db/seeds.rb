@@ -2,7 +2,7 @@ require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
 require_relative('../models/adoption.rb')
 
-# Adoption.delete_all
+Adoption.delete_all
 Animal.delete_all
 Owner.delete_all
 
@@ -53,27 +53,27 @@ animal4.save
 
 owner1 = Owner.new({
   "name" => "Claire Redfield",
-  "pets" => ""
+  "address" => "10 Mansion Way"
   })
 
 owner2 = Owner.new({
   "name" => "Barry Burton",
-  "pets" => ""
+  "address" => "9 Louisiana Walk"
   })
 
 owner3 = Owner.new({
   "name" => "Ada Wong",
-  "pets" => ""
+  "address" => "4 Spain Place"
   })
 
 owner4 = Owner.new({
   "name" => "Leon Kennedy",
-  "pets" => ""
+  "address" => "22 Cruise Street"
   })
 
 owner5 = Owner.new({
   "name" => "Chris Redfield",
-  "pets" => ""
+  "address" => "4 Capperton Place"
   })
 
 owner1.save
@@ -82,24 +82,24 @@ owner3.save
 owner4.save
 owner5.save
 
-# adoption1 = Adoption.new({
-#   "owner_id" => "owner1.id",
-#   "animal_id" => "animal2.id",
-#   "adopted_on" => "2017-02-22"
-#   })
+adoption1 = Adoption.new({
+  "owner_id" => owner1.id,
+  "animal_id" => animal2.id,
+  "adopted_on" => "2017-02-22"
+  })
 
-# adoption2 = Adoption.new({
-#   "owner_id" => "owner2.id",
-#   "animal_id" => "animal1.id",
-#   "adopted_on" => "2017-02-12"
-#   })
+adoption2 = Adoption.new({
+  "owner_id" => owner2.id,
+  "animal_id" => animal1.id,
+  "adopted_on" => "2017-02-12"
+  })
 
-# adoption3 = Adoption.new({
-#   "owner_id" => "owner4.id",
-#   "animal_id" => "animal3.id",
-#   "adopted_on" => "2017-02-08"
-#   })
+adoption3 = Adoption.new({
+  "owner_id" => owner4.id,
+  "animal_id" => animal3.id,
+  "adopted_on" => "2017-02-08"
+  })
 
-# adoption1.save
-# adoption2.save
-# adoption3.save
+adoption1.save
+adoption2.save
+adoption3.save

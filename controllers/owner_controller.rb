@@ -3,7 +3,7 @@ require( 'sinatra/contrib/all')
 require( 'pry' )
 require( './models/animal.rb' )
 require( './models/owner.rb' )
-# require( './models/adoption.rb' )
+require( './models/adoption.rb' )
 
 
 
