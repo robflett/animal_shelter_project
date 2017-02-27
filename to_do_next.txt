@@ -20,3 +20,8 @@ This is MVP.
 #   SqlRunner.run(sql)
  
 # end
+
+
+-----------------
+
+<!-- <p> Adoption Date: <%= adoption.adopted_on %></p> -->

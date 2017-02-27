@@ -7,5 +7,5 @@ require( './models/adoption.rb' )
 
 get '/adoptions' do
   @adoptions = Adoption.all()
-  erb(:"index")
+  erb(:"adoptions/index")
 end

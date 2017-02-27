@@ -1,5 +1,6 @@
 require_relative ('../db/sqlrunner.rb')
 require_relative ('../models/animal.rb')
+require('date')
 
 class Owner
 
@@ -52,7 +53,7 @@ end
 
 def adopt_animal(animal_id)
  
-  Adoption.new({'animal_id' => animal_id, 'owner_id' => @id, 'adopted_on' => Date.new}).save
+  Adoption.new({'animal_id' => animal_id, 'owner_id' => @id, 'adopted_on' => Date.today}).save
   
   # owner.add_pet(pet)
   #delete id from animals table
