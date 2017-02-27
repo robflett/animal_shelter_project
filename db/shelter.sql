@@ -15,7 +15,7 @@ CREATE TABLE animals(
   type VARCHAR(255),
   breed VARCHAR(255),
   adoptable VARCHAR(255), 
-  admission_date DATE
+  admission_date VARCHAR(255)
   -- adoptable to be a drop down menu
   -- owner_id SERIAL4 REFERENCES owners(id),
 );
