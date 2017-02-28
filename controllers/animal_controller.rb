@@ -9,7 +9,7 @@ require( './models/adoption.rb' )
 
 get '/animals' do
   @animals = Animal.all()
-  erb(:"animals/animals")
+  erb(:"animals/show")
 end
 
 get '/animals/:id/adopt' do
@@ -25,7 +25,7 @@ post '/animals/:id/adopt' do
 end
 
 get '/animals/new' do 
-  erb(:"animals/new_animal")
+  erb(:"animals/new")
 end
 
 post '/animals/new' do
@@ -45,8 +45,13 @@ post '/animals/:id/delete' do
   redirect to '/animals'
 end
 
-post '/animals/:id/edit' do
-  animal = Animal.find( params[:id])
+get '/animals/:id/edit' do
+  @animal = Animal.find( params[:id])
+  erb(:"animals/edit")
+end
+
+post '/animals/:id' do
+  animal = Animal.new( params)
   animal.update
   redirect to '/animals'
 end

@@ -34,7 +34,7 @@ def self.all()
 end
 
 def self.find( id )
-  sql = "SELECT * FROM owners WHERE id=#{id};"
+  sql = "SELECT * FROM owners WHERE id=#{ id };"
   owner = SqlRunner.run( sql )
   result = Owner.new( owner.first )
 
@@ -47,7 +47,7 @@ def delete()
 end
 
 def update()
-  sql = "UPDATE owners SET name = '#{@name}, address = '#{@address} WHERE id = '#{@id}"
+  sql = "UPDATE owners SET name = '#{@name}', address = '#{@address}' WHERE id='#{ @id }';"
   SqlRunner.run(sql)
 end
 

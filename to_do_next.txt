@@ -25,3 +25,17 @@ This is MVP.
 -----------------
 
 <!-- <p> Adoption Date: <%= adoption.adopted_on %></p> -->
+
+----------------
+
+<form method="POST" action="/owners/<%= @owner.id %>/edit"
+
+<input type="submit" value="Click to Update" />
+
+</form>
+
+<form method="POST" action="/owners/<%= @owner.id %>/delete">
+
+  <input type="submit" value="Click to delete"/>
+
+</form>

@@ -9,7 +9,7 @@ require( './models/adoption.rb' )
 
 get '/owners' do
   @owners = Owner.all()
-  erb(:"owners/owners")
+  erb(:"owners/show")
 end
 
 get '/owners/new' do 
@@ -33,8 +33,13 @@ post '/owners/:id/delete' do
   redirect to '/owners'
 end
 
-post '/owners/:id/edit' do
-  owner = Owner.find( params[:id])
+get '/owners/:id/edit' do
+  @owner = Owner.find( params[:id] )
+  erb(:"owners/edit")
+end
+
+post '/owners/:id' do
+  owner = Owner.new( params )
   owner.update
-  redirect to 'owners'
+  redirect to '/owners'
 end

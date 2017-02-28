@@ -2,17 +2,14 @@
 <p>Name: <%= @owner.name %></p>
 
 
-
 <p>Address: <%= @owner.address %></p> 
 
 
 </div>
 <hr /> 
 
+<div class="navbar">
+<p> <a href="/owners/<%= @owner.id %>/edit">Click to Update</a></p>
 
-
-<form method="POST" action="/owners/<%= @owner.id %>/delete">
-
-  <input type="submit" value="Click to delete"/>
-
-</form>
+<p> <a href="/owners/<%= @owner.id%>/delete">Click to Delete</a></p>
+</div>
