@@ -11,5 +11,9 @@
 <div class="navbar">
 <p> <a href="/owners/<%= @owner.id %>/edit">Click to Update</a></p>
 
-<p> <a href="/owners/<%= @owner.id%>/delete">Click to Delete</a></p>
 </div>
+
+<form method="POST" action="/owners/<%= @owner.id %>/delete">
+
+
+  <input type="submit" value="Click to Delete Owner from Database" />

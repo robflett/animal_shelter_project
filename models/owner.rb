@@ -55,6 +55,7 @@ end
 def adopt_animal(animal_id)
  
   Adoption.new({'animal_id' => animal_id, 'owner_id' => @id, 'adopted_on' => Date.today}).save
+  
 end
 
 

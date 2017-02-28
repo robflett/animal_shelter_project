@@ -7,3 +7,7 @@ require( './models/adoption.rb' )
 require( './controllers/animal_controller.rb')
 require( './controllers/owner_controller.rb')
 require( './controllers/adoption_controller.rb')
+
+get '/welcome' do
+  erb(:welcome)
+end

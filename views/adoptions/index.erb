@@ -3,7 +3,16 @@
 
 <p>Animal Name: <%= adoption.animal.name %></p>
 <p> Owner Name: <%= adoption.owner.name %></p>
-<hr>
 
+
+
+<form method="POST" action="/animals/<%= adoption.animal.id %>/delete">
+
+
+  <input type="submit" value="Click to Delete Animal from Database" />
+
+</form>
+
+<hr>
 
 <% end %>

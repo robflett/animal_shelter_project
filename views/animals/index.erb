@@ -15,5 +15,11 @@
 <div class="navbar">
 <p> <a href="/animals/<%= @animal.id %>/edit">Click to Update</a></p>
 
-<p> <a href="/animals/<%= @animal.id%>/delete">Click to Delete</a></p>
 </div>
+
+<form method="POST" action="/animals/<%= @animal.id %>/delete">
+
+
+  <input type="submit" value="Click to Delete Animal from Database" />
+
+</form>
