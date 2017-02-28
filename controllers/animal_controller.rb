@@ -38,3 +38,15 @@ get '/animals/:id' do
   @animal = Animal.find( params[:id] ) 
   erb(:"animals/index")
 end
+
+post '/animals/:id/delete' do
+  animal = Animal.find( params[:id])
+  animal.delete
+  redirect to '/animals'
+end
+
+post '/animals/:id/edit' do
+  animal = Animal.find( params[:id])
+  animal.update
+  redirect to '/animals'
+end

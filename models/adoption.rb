@@ -1,4 +1,7 @@
 require_relative ('../db/sqlrunner.rb')
+require_relative ('../models/animal.rb')
+require_relative ('../models/owner.rb')
+require('date')
 
 class Adoption
 
@@ -47,17 +50,17 @@ end
 
 
   def animal()
-    sql = "SELECT * FROM animals WHERE animal_id = #{@id}"
-    animal_hashes = SqlRunner.run(sql)
-    animal_objects = animal_hashes.map { |animal_hash| Animal.new(animal_hash) }
-    return animal_objects
+    sql = "SELECT * FROM animals WHERE id = #{@animal_id}"
+    animal_hash = SqlRunner.run(sql).first
+
+    return Animal.new(animal_hash)
   end
 
   def owner()
-      sql = "SELECT * FROM owners WHERE owner_id = #{@id}"
-      owner_hashes = SqlRunner.run(sql)
-      owner_objects = owner_hashes.map { |owner_hash| Animal.new(owner_hash) }
-      return owner_objects
+      sql = "SELECT * FROM owners WHERE id = #{@owner_id}"
+      owner_hash = SqlRunner.run(sql).first
+      
+     return Owner.new(owner_hash) 
   end
 
 end

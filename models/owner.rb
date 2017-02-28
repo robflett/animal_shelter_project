@@ -46,17 +46,15 @@ def delete()
   SqlRunner.run( sql )
 end
 
-# def add_pet(pet)
-#   @pets << pet
-# end
+def update()
+  sql = "UPDATE owners SET name = '#{@name}, address = '#{@address} WHERE id = '#{@id}"
+  SqlRunner.run(sql)
+end
 
 
 def adopt_animal(animal_id)
  
   Adoption.new({'animal_id' => animal_id, 'owner_id' => @id, 'adopted_on' => Date.today}).save
-  
-  # owner.add_pet(pet)
-  #delete id from animals table
 end
 
 

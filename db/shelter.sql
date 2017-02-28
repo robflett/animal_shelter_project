@@ -17,12 +17,11 @@ CREATE TABLE animals(
   adoptable VARCHAR(255), 
   admission_date VARCHAR(255)
 
-  -- owner_id SERIAL4 REFERENCES owners(id),
 );
 
 CREATE TABLE adoptions(
   id SERIAL4 PRIMARY KEY,
-  owner_id SERIAL4 REFERENCES owners ON DELETE CASCADE,
-  animal_id SERIAL4 REFERENCES animals ON DELETE CASCADE,
+  owner_id SERIAL4 REFERENCES owners(id) ON DELETE CASCADE,
+  animal_id SERIAL4 REFERENCES animals(id) ON DELETE CASCADE,
   adopted_on DATE   
 );

@@ -46,6 +46,11 @@ def delete()
   SqlRunner.run( sql )
 end
 
+def update()
+  sql = "UPDATE animals SET name = '#{@name}', type = '#{@type}', breed = '#{@breed}', adoptable = '#{@adoptable}', admission_date = '#{@admission_date}' WHERE id = '#{@id}';"
+  SqlRunner.run(sql)
+end
+
 
 
 end

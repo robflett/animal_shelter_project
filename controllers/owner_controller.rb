@@ -26,3 +26,15 @@ get '/owners/:id' do
   @owner = Owner.find( params[:id] ) 
   erb(:"owners/index")
 end
+
+post '/owners/:id/delete' do
+  owner = Owner.find( params[:id])
+  owner.delete
+  redirect to '/owners'
+end
+
+post '/owners/:id/edit' do
+  owner = Owner.find( params[:id])
+  owner.update
+  redirect to 'owners'
+end
