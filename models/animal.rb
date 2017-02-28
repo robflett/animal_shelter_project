@@ -2,7 +2,7 @@ require_relative ('../db/sqlrunner.rb')
 
 class Animal
 
-attr_accessor :id, :type, :name, :breed, :adoptable, :admission_date
+attr_accessor :id, :type, :name, :breed, :adoptable, :admission_date, :url
 
 def initialize( options )
 
@@ -12,11 +12,12 @@ def initialize( options )
   @breed = options['breed']
   @adoptable = options['adoptable']
   @admission_date = options['admission_date']
+  @url = options['url']
 
 end 
 
 def save()
-  sql = "INSERT INTO animals (name, type, breed, adoptable, admission_date) VALUES ('#{@name}', '#{@type}', '#{@breed}', '#{@adoptable}', '#{@admission_date}') RETURNING *;"
+  sql = "INSERT INTO animals (name, type, breed, adoptable, admission_date, url) VALUES ('#{@name}', '#{@type}', '#{@breed}', '#{@adoptable}', '#{@admission_date}', '#{@url}') RETURNING *;"
   animal_info = SqlRunner.run(sql).first
   @id = animal_info['id'].to_i
 end

@@ -8,31 +8,34 @@ Owner.delete_all
 
 animal1 = Animal.new({
 
-  "name" => "Steve",
+  "name" => "Rufus",
   "type" => "Dog",
   "breed" => "Basset Hound",
   "adoptable" => "Adoptable",
-  "admission_date" => "2017-04-12"
+  "admission_date" => "2017-04-12",
+  "url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Bvdb-bassethound1.jpg/220px-Bvdb-bassethound1.jpg"
 
   })
 
 animal2 = Animal.new({
 
-  "name" => "Janick",
+  "name" => "Sparky",
   "type" => "Cat",
   "breed" => "Tabby",
   "adoptable" => "Not-Adoptable",
-  "admission_date" => "2016-12-10"
+  "admission_date" => "2016-12-10",
+  "url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Aegean_cat.jpg/220px-Aegean_cat.jpg"
 
   })
   
 animal3 = Animal.new({
 
-  "name" => "Adrian",
+  "name" => "Corrie",
   "type" => "Dog",
   "breed" => "Daschund",
   "adoptable" => "Adoptable",
-  "admission_date" => "2016-08-25"
+  "admission_date" => "2016-08-25",
+  "url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wire-haired_Dachshund_R_01.JPG/220px-Wire-haired_Dachshund_R_01.JPG"
 
   })
 
@@ -42,7 +45,8 @@ animal4 = Animal.new({
   "type" => "Dog",
   "breed" => "Springer Spaniel",
   "adoptable" => "Not-Adoptable",
-  "admission_date" => "2017-02-23"
+  "admission_date" => "2017-02-23",
+  "url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Welsh_Springer_Spaniel_Dog.jpg/220px-Welsh_Springer_Spaniel_Dog.jpg"
 
   })
 

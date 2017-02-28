@@ -1,8 +1,24 @@
+<body class="shelter">
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="animals"><a href="/animals">View Animals</a></li>
+        <li class="owners"><a href="/owners">View Owners</a></li>
+        <li class="new_owners"><a href="/owners/new">Add New Owner</a></li>
+        <li class="new_animal"><a href="/animals/new">Add New Animal</a></li>
+        <li class="adoptions"><a class="active" href="/adoptions">View Adoptions</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+
 <hr>
 <% @adoptions.each do |adoption| %>
 
 <p>Animal Name: <%= adoption.animal.name %></p>
-<p> Owner Name: <%= adoption.owner.name %></p>
+<p>Owner Name: <%= adoption.owner.name %></p>
+
 
 
 

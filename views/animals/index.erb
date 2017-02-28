@@ -1,3 +1,18 @@
+<body class="shelter">
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="animals"><a class="active" href="/animals">View Animals</a></li>
+        <li class="owners"><a href="/owners">View Owners</a></li>
+        <li class="new_owners"><a href="/owners/new">Add New Owner</a></li>
+        <li class="new_animal"><a href="/animals/new">Add New Animal</a></li>
+        <li class="adoptions"><a href="/adoptions">View Adoptions</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+
 <div class="details">
 <p>Name: <%= @animal.name %></p>
 
@@ -8,6 +23,8 @@
 <p>Adoptable?: <%= @animal.adoptable %></p>
 
 <p>Admission date: <%= @animal.admission_date %></p>
+
+<img src=<%= @animal.url %>>
 </div>
 <hr /> 
 
