@@ -2,7 +2,7 @@
   <header>
     <div class="nav">
       <ul>
-        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="home"><a href="/">Home</a></li>
         <li class="animals"><a href="/animals">View Animals</a></li>
         <li class="owners"><a class="active" href="/owners">View Owners</a></li>
         <li class="new_owners"><a href="/owners/new">Add New Owner</a></li>
@@ -13,6 +13,7 @@
   </header>
 </body>
 
+<div id="article" class="list_items">
 
 <% @owners.each do |owner| %>
 
@@ -21,8 +22,13 @@
 
   <div class="navbar">
 <p> <a href="/owners/<%= owner.id %>">Show Full Details</a> </p> 
-<hr>
+<!-- <hr> -->
 
+<div class="line_break">
+
+</div>
    
 
 <% end %>
+
+</div>

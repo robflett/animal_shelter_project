@@ -2,7 +2,7 @@
   <header>
     <div class="nav">
       <ul>
-        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="home"><a href="/">Home</a></li>
         <li class="animals"><a href="/animals">View Animals</a></li>
         <li class="owners"><a href="/owners">View Owners</a></li>
         <li class="new_owners"><a href="/owners/new">Add New Owner</a></li>
@@ -11,7 +11,8 @@
       </ul>
     </div>
   </header>
-</body>
+
+  <div class="new_animal_list">
 
 <form method="POST" action="/animals/new" >
 
@@ -53,6 +54,9 @@ name="url" />
 
 <input type="submit" value="Confirm new animal" class="form_button" />
 
+</div>
 
 
 </form>
+
+</body>

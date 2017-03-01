@@ -8,6 +8,6 @@ require( './controllers/animal_controller.rb')
 require( './controllers/owner_controller.rb')
 require( './controllers/adoption_controller.rb')
 
-get '/welcome' do
+get '/' do
   erb(:welcome)
 end

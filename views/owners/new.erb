@@ -2,7 +2,7 @@
   <header>
     <div class="nav">
       <ul>
-        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="home"><a href="/">Home</a></li>
         <li class="animals"><a href="/animals">View Animals</a></li>
         <li class="owners"><a href="/owners">View Owners</a></li>
         <li class="new_owners"><a class="active" href="/owners/new">Add New Owner</a></li>
@@ -11,9 +11,9 @@
       </ul>
     </div>
   </header>
-</body>
 
 
+<div class="new_owner">
 <form method="POST" action="/owners/new" >
 <label for="name">Name: </label>
 <input type="text"
@@ -30,6 +30,8 @@ name="address" />
 
 
 <input type="submit" value="Confirm New Owner" class="form_button"/>
-
-
 </form>
+</div>
+
+
+</body>

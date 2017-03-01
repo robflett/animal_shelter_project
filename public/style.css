@@ -34,7 +34,7 @@ body {
     background:red;
     box-shadow: 0px 0px 1px #777;
 }
-
+/*wenkit for safari, moz for mozilla*/
 .navbar a {
   background-color: grey;
   -moz-border-radius: 5px;
@@ -104,14 +104,78 @@ body {
   }
 
   .list_items {
-    display: inline-grid;
-    color: red;
+    text-align: center;
+    display: inline;
+    /*color: red;*/
   }
  
+  .new_owner {
+
+      text-align: center;
+      background-color: white;
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+
+  }
+
+  .new_animal_list {
+
+      text-align: center;
+      background-color: white;
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+
+  }
+
  .image {
     position: relative;
     border-radius: 8px;
     text-align: center;
  }
+
+ .list_items {
+
+
+ }
+
+ .line_break {
+
+  border-top: 1px solid black;
+  padding-bottom: 20px;
+ }
+
+ /*.list_items p {
+
+    position: relative;
+    background-color: white;
+    float: left;
+
+ }*/
+
+ /*.flexcontainer {
+    border: black solid;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row 
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+/*
+      line-height 80px;*/
+     /* padding: 5px;
+      width: 80px;
+      height: 65px;
+      margin-top: 10px;*/
+    
+  /*  line-height: 70px;*/
+   
+    text-align: center;
+ }*/
 
 }

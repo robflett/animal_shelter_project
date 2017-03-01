@@ -2,7 +2,7 @@
   <header>
     <div class="nav">
       <ul>
-        <li class="home"><a href="/welcome">Home</a></li>
+        <li class="home"><a href="/">Home</a></li>
         <li class="animals"><a href="/animals">View Animals</a></li>
         <li class="owners"><a href="/owners">View Owners</a></li>
         <li class="new_owners"><a href="/owners/new">Add New Owner</a></li>
@@ -13,7 +13,10 @@
   </header>
 </body>
 
-<hr>
+
+
+<div id="article" class="list_items">
+
 <% @adoptions.each do |adoption| %>
 
 <p><strong>Animal Name:</strong> <%= adoption.animal.name %></p>
@@ -36,6 +39,12 @@
 
 </form>
 
-<hr>
+<!-- <hr> -->
+
+<div class="line_break">
+
+</div>
 
 <% end %>
+
+</div>
