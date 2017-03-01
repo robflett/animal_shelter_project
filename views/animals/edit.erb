@@ -13,7 +13,7 @@
   </header>
 </body>
 
-<form method="POST" action="/animals/<%= @animal.id %>">
+<form method="POST" action="/animals/<%= @animal.id %>" >
 
 <label for="name">Name: </label>
 <input type="text"
@@ -56,7 +56,7 @@ value="<%= @animal.url %>"
 name="url" />
 
 
-<input type="submit" value="Update Animal" />
+<input type="submit" value="Update Animal" class="form_button"/>
 
 
 

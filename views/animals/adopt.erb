@@ -15,7 +15,7 @@
 
 <h2>Congratulations <%= @animal.name %> you're being adopted by ...</h2>
 
-<form method="POST" action="/animals/<%= @animal.id %>/adopt">
+<form method="POST" action="/animals/<%= @animal.id %>/adopt" >
 
   <label for="owner">Select Owner: </label>
   <select id="owner-select" name="owner_id">
@@ -24,6 +24,6 @@
     <option value=<%= owner.id %>><%=owner.name%></option>
   <%end%>
 
-  <input type="submit" value="Confirm Adoption" />
+  <input type="submit" value="Confirm Adoption" class="form_button"/>
 
 </form>

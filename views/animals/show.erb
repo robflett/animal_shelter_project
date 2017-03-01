@@ -11,14 +11,14 @@
       </ul>
     </div>
   </header>
-</body>
 
-
+<div id="article" class="list_items">
+    
 <% @animals.each do |animal| %>
 
-<p>Animal Name: <%= animal.name %></p>
-<p> Type: <%= animal.type %></p>
-<p> Admission Date: <%= animal.admission_date %></p>
+<p><strong>Animal Name: </strong><%= animal.name %></p>
+<p> <strong>Type: </strong><%= animal.type %></p>
+<p> <strong>Admission Date: </strong><%= animal.admission_date %></p>
 
   <div class="navbar">
   
@@ -29,7 +29,6 @@
 
   </div>
 
- 
 
 <% if animal.adoptable == "Adoptable" %>
   <div class="navbar">
@@ -37,19 +36,14 @@
   </div>
 <% end %>
 
-
-<!-- stored in a sidebar -->
-
-<div class="navbar">
-  <p> <a href="/animals/show_type">Click to Find all Cats</a></p>
-
+   
+<hr>
 </div>
 
-<div class="navbar">
-  <p> <a href="/animals/show_type">Click to Find all Dogs</a></p>
-
-</div>
-    
-<!-- stored in a sidebar -->
 
 <% end %>
+
+    
+
+
+</body>

@@ -55,31 +55,5 @@ def update()
 end
 
 
-# experiment to add search for type#
-
-def self.find_type_cat()
-  sql = "SELECT * FROM animals WHERE TRUE and type = 'Cat';"
-  animal = SqlRunner.run( sql )
-  result = Animal.new( animal)
-
-  return result
-end
-
-def self.find_type_dog()
-  sql = "SELECT * FROM animals WHERE TRUE and type = 'Dog';"
-  animal = SqlRunner.run( sql )
-  result = Animal.new( animal )
-
-  return result
-end
-
-
-# def self.find_type( id )
-#   sql = "SELECT type FROM animals WHERE id=#{id};"
-#   animal = SqlRunner.run( sql )
-#   result = Animal.new( animal.first )
-
-#   return result
-# end
 
 end

@@ -16,23 +16,23 @@
 <hr>
 <% @adoptions.each do |adoption| %>
 
-<p>Animal Name: <%= adoption.animal.name %></p>
-<p>Owner Name: <%= adoption.owner.name %></p>
+<p><strong>Animal Name:</strong> <%= adoption.animal.name %></p>
+<p><strong>Owner Name:</strong> <%= adoption.owner.name %></p>
 
 
 
 
-<form method="POST" action="/animals/<%= adoption.animal.id %>/delete">
+<form method="POST" action="/animals/<%= adoption.animal.id %>/delete" >
 
 
-  <input type="submit" value="Click to Delete Animal from Shelter Database" />
+  <input type="submit" value="Click to Delete Animal from Shelter Database" class="form_button"/>
 
 </form>
 
-<form method="POST" action="/adoptions/<%= adoption.id %>/delete">
+<form method="POST" action="/adoptions/<%= adoption.id %>/delete" >
 
 
-  <input type="submit" value="Click to Delete Entire Adoption Record from Shelter Database" />
+  <input type="submit" value="Click to Delete Entire Adoption Record from Shelter Database" class="form_button" />
 
 </form>
 

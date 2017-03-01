@@ -39,3 +39,66 @@ This is MVP.
   <input type="submit" value="Click to delete"/>
 
 </form>
+
+
+0-------------
+
+#find by type method#
+get '/animals/show_type' do 
+  @animal = Animal.find_type_dog() 
+  erb(:"animals/show_type")
+end
+
+
+get '/animals/show_type' do 
+  @animal = Animal.find_type_cat() 
+  erb(:"animals/show_type")
+end
+
+###
+
+---------
+<!-- stored in a sidebar -->
+
+<div class="navbar">
+  <p> <a href="/animals/show_type">Click to Find all Cats</a></p>
+
+</div>
+
+<div class="navbar">
+  <p> <a href="/animals/show_type">Click to Find all Dogs</a></p>
+
+</div>
+    
+<!-- stored in a sidebar -->
+
+----------
+
+
+# experiment to add search for type#
+
+def self.find_type_cat()
+  sql = "SELECT * FROM animals WHERE TRUE and type = 'Cat';"
+  animal = SqlRunner.run( sql )
+  result = Animal.new( animal)
+
+  return result
+end
+
+def self.find_type_dog()
+  sql = "SELECT * FROM animals WHERE TRUE and type =#{type};"
+  animal = SqlRunner.run( sql )
+  result = Animal.new( animal )
+
+  return result
+end
+
+
+# def self.find_type( id )
+#   sql = "SELECT type FROM animals WHERE id=#{id};"
+#   animal = SqlRunner.run( sql )
+#   result = Animal.new( animal.first )
+
+#   return result
+# end
+--------

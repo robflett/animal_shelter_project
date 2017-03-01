@@ -6,21 +6,6 @@ require( './models/owner.rb' )
 require( './models/adoption.rb' )
 
 
-#find by type method#
-get '/animals/show_type' do 
-  @animal = Animal.find_type_dog() 
-  erb(:"animals/show_type")
-end
-
-
-get '/animals/show_type' do 
-  @animal = Animal.find_type_cat() 
-  erb(:"animals/show_type")
-end
-
-###
-
-
 get '/animals' do
   @animals = Animal.all()
   erb(:"animals/show")
@@ -73,9 +58,5 @@ post '/animals/:id' do
 end
 
 
-#find by breed method#
-get '/animals/:id' do 
-  @animal = Animal.find_breed( params[:id] ) 
-  erb(:"animals/index")
-end
+
 
