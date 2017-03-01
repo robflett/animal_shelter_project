@@ -15,14 +15,14 @@
 
 
 <form method="POST" action="/owners/<%= @owner.id %>" >
-<label for="name">Name: </label>
+<label for="name"><strong>Name:</strong> </label>
 <input type="text"
 id="name"
 value="<%= @owner.name %>"
 name="name"/>
 
 
-<label for="address">Address: </label>
+<label for="address"><strong>Address: </strong> </label>
 <input type="text"
 id="address"
 value="<%= @owner.address %>"

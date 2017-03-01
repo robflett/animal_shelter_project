@@ -13,20 +13,23 @@
   </header>
 </body>
 
-<div class="details">
-<p>Name: <%= @animal.name %></p>
+<div class="list_items">
+<p><strong>Name:</strong> <%= @animal.name %></p>
 
-<p>Type: <%= @animal.type %></p>
+<p><strong>Type: </strong><%= @animal.type %></p>
 
-<p>Breed: <%= @animal.breed %></p> 
+<p><strong>Breed: </strong><%= @animal.breed %></p> 
 
-<p>Adoptable?: <%= @animal.adoptable %></p>
+<p><strong>Adoptable?: </strong><%= @animal.adoptable %></p>
 
-<p>Admission date: <%= @animal.admission_date %></p>
+<p><strong>Admission date: </strong><%= @animal.admission_date %></p>
 
+<div class="image">
 <img src=<%= @animal.url %>>
 </div>
-<hr /> 
+<!-- <hr />  -->
+
+
 
 
 <div class="navbar">
@@ -42,3 +45,9 @@
   <input type="submit" value="Click to Delete Animal from Database" class="form_button"/>
 
 </form>
+
+<div class="line_break">
+
+</div>
+
+</div>

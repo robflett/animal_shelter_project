@@ -5,6 +5,13 @@ h1 {
   font-family: fantasy;
 }
 
+h2 {
+
+  text-align: center;
+  font-family: fantasy;
+
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -131,6 +138,17 @@ body {
 
   }
 
+  .new_adoption_list {
+
+      text-align: center;
+      background-color: white;
+      padding-top: 10px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+
+  }
+
  .image {
     position: relative;
     border-radius: 8px;
@@ -142,40 +160,13 @@ body {
 
  }
 
+
  .line_break {
 
   border-top: 1px solid black;
   padding-bottom: 20px;
  }
 
- /*.list_items p {
 
-    position: relative;
-    background-color: white;
-    float: left;
-
- }*/
-
- /*.flexcontainer {
-    border: black solid;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row 
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-/*
-      line-height 80px;*/
-     /* padding: 5px;
-      width: 80px;
-      height: 65px;
-      margin-top: 10px;*/
-    
-  /*  line-height: 70px;*/
-   
-    text-align: center;
- }*/
 
 }

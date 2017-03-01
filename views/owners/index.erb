@@ -14,15 +14,15 @@
 </body>
 
 
-<div class="details">
-<p>Name: <%= @owner.name %></p>
+<div class="list_items">
+<p><strong>Name: </strong><%= @owner.name %></p>
 
 
-<p>Address: <%= @owner.address %></p> 
+<p><strong>Address: </strong><%= @owner.address %></p> 
 
 
-</div>
-<hr /> 
+
+<!-- <hr />  -->
 
 <div class="navbar">
 <p> <a href="/owners/<%= @owner.id %>/edit">Click to Update</a></p>
@@ -33,3 +33,9 @@
 
 
   <input type="submit" value="Click to Delete Owner from Database" class="form_button"/>
+
+  <div class="line_break">
+
+  </div>
+  </div>
+</form>
