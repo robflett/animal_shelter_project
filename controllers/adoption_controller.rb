@@ -9,3 +9,10 @@ get '/adoptions' do
   @adoptions = Adoption.all()
   erb(:"adoptions/index")
 end
+
+
+post '/adoptions/:id/delete' do
+  adoption = Adoption.find( params[:id])
+  adoption.delete
+  redirect to '/adoptions'
+end

@@ -25,7 +25,14 @@
 <form method="POST" action="/animals/<%= adoption.animal.id %>/delete">
 
 
-  <input type="submit" value="Click to Delete Animal from Database" />
+  <input type="submit" value="Click to Delete Animal from Shelter Database" />
+
+</form>
+
+<form method="POST" action="/adoptions/<%= adoption.id %>/delete">
+
+
+  <input type="submit" value="Click to Delete Entire Adoption Record from Shelter Database" />
 
 </form>
 
