@@ -13,6 +13,8 @@
   </header>
 </body>
 
+<div class="new_animal_list">
+
 <form method="POST" action="/animals/<%= @animal.id %>" >
 
 <label for="name">Name: </label>
@@ -43,6 +45,10 @@ name="adoptable">
   <option value="Not-adoptable">Not-adoptable</option>
 </select> 
 
+<div class="line_break_no_line">
+
+</div>
+
 <label for="admission_date">Admission Date (please use year-month-day format e.g. 2016-02-24): </label>
 <input type="text"
 id="admission_date"
@@ -58,6 +64,6 @@ name="url" />
 
 <input type="submit" value="Update Animal" class="form_button"/>
 
-
+</div>
 
 </form>
